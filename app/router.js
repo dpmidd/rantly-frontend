@@ -7,6 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource("rants", {path: '/'});
+  this.route("login", {path: '/login'});
+  this.route('application');
+  this.route('protected');
   this.resource("users", {path: '/users'});
   this.resource("signup", {path: '/signup'});
 });
