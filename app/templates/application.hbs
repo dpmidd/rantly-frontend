@@ -12,7 +12,11 @@
 </header>
 
 <body>
+
   <aside>
+    <div class="rant-search">
+      {{input type=search value=params class="rant-search-field" placeholder="Search"}}
+    </div>
     {{login-component}}
   </aside>
 
@@ -23,5 +27,4 @@
   <main>
     {{outlet}}
   </main>
-
 </body>
