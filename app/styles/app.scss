@@ -1,97 +1,102 @@
-  $susy: (
-    gutters: (0),
-  );
+$susy: (
+gutters: (0),
+);
 
-  @import 'bower_components/susy/sass/susy';
-  @import 'scalefonts';
-  @import 'navigationbar';
-  @import url(http://fonts.googleapis.com/css?family=Laila:400,700);
-  @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
-  @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
-  @import 'login';
-  @import 'newrant';
-  *,:after,:before{box-sizing:border-box}
+@import 'bower_components/susy/sass/susy';
+@import 'scalefonts';
+@import 'navigationbar';
+@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
+@import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
+@import 'login';
+@import 'newrant';
 
-  a {
-    text-decoration: none;
-    font: inherit;
+*,:after,:before{box-sizing:border-box}
+
+a {
+  text-decoration: none;
+  font: inherit;
+}
+
+body {
+  @include span(10 of 10);
+  aside {
+    padding-left: 15px;
+    @include span(2 of 8);
   }
-
-  body {
-    @include span(8 of 8);
-    aside {
-      padding-left: 15px;
-      @include span(2 of 8);
-    }
-    main {
-      @include span(6 of 8 last);
-    }
+  main {
+    @include span(6 of 8 last);
   }
+}
 
-  .app-inner-header {
+.app-inner-header {
   float: left;
   background: #3498DB;
   padding: 7px 15px;
   color: #fff;
+  margin-bottom: 20px;
+}
+
+.app-inner-header {
+  width: 100%;
+}
+
+.app-inner-header .button {
+  float: right;
+  color: #16a085;
+}
+
+.button-invert {
+  background: #fff;
+  color: #1ABC9C;
+  border-color: #fff;
+  &:hover{
+    color: white;
+    background: #1ABC9C;
   }
+}
 
-  .app-inner-header {
-    width: 74.6687%;
-  }
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
 
-  .app-inner-header .button {
-    float: right;
-    color: #16a085;
-  }
+.rant-search-field {
+  padding: 5px 0;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #34495E;
+  text-indent: 0;
+  background: 0 0;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
 
-  .button-invert {
-    background: #fff;
-    color: #1ABC9C;
-    border-color: #fff;
-  }
+.rant-search-field input, .rant-search-field textarea {
+  display: block;
+  width: 100%;
+}
 
-  .button {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #fff;
-    border: 1px solid;
-    border-radius: 3px;
-    -webkit-transition: .25s;
-    transition: .25s;
-  }
+.rant-search {
+  padding: 5px;
+  color: #3498DB;
+  background: 0 0/16px 16px #3498DB;
+}
 
-  .rant-search-field {
-    padding: 5px 0;
-    margin: 0;
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 23px;
-    color: #34495E;
-    text-indent: 0;
-    background: 0 0;
-    border-color: transparent;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .rant-search-field input, textarea {
-    display: block;
-    width: 100%;
-
-  }
-
-  .rant-search {
-    padding: 5px;
-    color: #3498DB;
-    background: 0 0/16px 16px #3498DB;
-  }
-
-  .rant-search-field::-webkit-input-placeholder {
+.rant-search-field::-webkit-input-placeholder {
    color: white;
-  }
+}
