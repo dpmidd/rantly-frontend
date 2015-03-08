@@ -26,3 +26,41 @@ body {
     @include span(6 of 8 last);
   }
 }
+
+.app-inner-header {
+  float: left;
+  background: #3498DB;
+  padding: 7px 15px;
+  color: #fff;
+}
+
+.app-inner-header {
+  width: 74.6687%;
+}
+
+.app-inner-header .button {
+  float: right;
+  color: #16a085;
+}
+
+.button-invert {
+  background: #fff;
+  color: #1ABC9C;
+  border-color: #fff;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
