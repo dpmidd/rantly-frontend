@@ -22,7 +22,7 @@
 
   <main>
     <header class="app-inner-header">
-      <button class="button button-invert">New Rant</button>
+      <button {{action 'newRant' this}} class="button button-invert">New Rant</button>
     </header>
 
     {{outlet}}
@@ -30,5 +30,5 @@
 
   <footer>
   </footer>
-  
+
 </body>
