@@ -16,12 +16,12 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self'",
-      'font-src': "'self'",
-      'connect-src': "'self' localhost:3000/",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
+      'connect-src': "'self' localhost:3000",
+      'img-src': "'self' http://www.gravatar.com/",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
       'media-src': "'self'"
-    },
+  },
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -32,7 +32,12 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authorizer: 'simple-auth-authorizer:devise'
   };
-  
+
+  ENV['simple-auth-devise'] = {
+    crossOriginWhitelist: ['*'],
+    identificationAttributeName: 'email'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
