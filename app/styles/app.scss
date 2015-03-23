@@ -2,8 +2,6 @@ $susy: (
 gutters: (0),
 );
 
-*,:after,:before{box-sizing:border-box}
-
 @import 'bower_components/susy/sass/susy';
 @import url(http://fonts.googleapis.com/css?family=Laila:400,700);
 @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
@@ -12,6 +10,8 @@ gutters: (0),
 @import 'newrant';
 @import 'scalefonts';
 @import 'navigationbar';
+
+*,:after,:before{box-sizing:border-box}
 
 a {
   text-decoration: none;
