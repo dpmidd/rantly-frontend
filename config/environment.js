@@ -30,7 +30,8 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:devise'
+    authorizer: 'simple-auth-authorizer:devise',
+    routeAfterAuthentication: null
   };
 
   ENV['simple-auth-devise'] = {
