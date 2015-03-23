@@ -10,8 +10,27 @@
   </div>
 </header>
 
+<aside>
+  <div class="rant-search">
+    {{input type=search value=params class="rant-search-field" placeholder="Search"}}
+  </div>
+</aside>
+
+<main>
+  <header class="app-inner-header">
+    <button {{action 'newRant' this}} class="button button-invert">New Rant</button>
+  </header>
+
+  {{outlet}}
+</main>
+
 {{#if session.isAuthenticated}}
-  <a {{ action 'invalidateSession' }}>Logout</a>
+  <form class='login-form'>
+    <div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
+    <div class="form-group">
+      <button type='submit' {{ action 'invalidateSession' }}>Logout</a>
+    </div>
+  </form>
 {{else}}
   <form class='login-form' {{action 'authenticate' on='submit'}}>
     <div class='form-group'>
@@ -27,21 +46,6 @@
 {{/if}}
 
 <body>
-
-  <aside>
-    <div class="rant-search">
-      {{input type=search value=params class="rant-search-field" placeholder="Search"}}
-    </div>
-    {{login-component}}
-  </aside>
-
-  <main>
-    <header class="app-inner-header">
-      <button {{action 'newRant' this}} class="button button-invert">New Rant</button>
-    </header>
-
-    {{outlet}}
-  </main>
 
   <footer>
   </footer>
