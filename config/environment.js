@@ -18,7 +18,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
-      'connect-src': "'self' localhost:3000 https://frozen-falls-9941.herokuapp.com/",
+      'connect-src': "'self' localhost:3000",
       'img-src': "'self' http://www.gravatar.com/",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
       'media-src': "'self'"
@@ -36,7 +36,6 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    serverTokenEndpoint: 'https://frozen-falls-9941.herokuapp.com/',
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email'
   };
