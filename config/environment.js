@@ -36,6 +36,7 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
+    serverTokenEndpoint: 'https://frozen-falls-9941.herokuapp.com/',
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email'
   };
