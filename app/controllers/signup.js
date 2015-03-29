@@ -3,17 +3,17 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations.Mixin, {
   validations: {
-    username: {
-      format: {with: /^\S*$/, message: "Username can't be blank or contain spaces"}
+    firstname: {
+      format: {with: /^\S*$/, message: "First name can't be blank or contain spaces"}
     },
-    name: {
-      presence: {message: "Name can't be blank"}
+    lastname: {
+      presence: {message: "Last name can't be blank"}
     },
     email: {
       format: {with: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/, message: 'Must be a valid email address'}
     },
     password: {
-      length: {minimum: 8, messages: {tooShort: 'Must be at least 8 characters'}}
+      length: {minimum: 8, messages: {tooShort: 'Password must be at least 8 characters'}}
     }
   },
 
