@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'rantly-frontend',
     environment: environment,
     baseURL: '/',
+    exportApplicationGlobal: true
     locationType: 'auto',
     adapterURL: process.env.ADAPTER_URL,
     EmberENV: {
