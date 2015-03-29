@@ -6,6 +6,14 @@ export default Ember.ArrayController.extend(LoginControllerMixin, {
   actions: {
     newRant: function() {
       this.transitionToRoute('/new');
+    },
+
+    search: '',
+
+    doSearch: function() {
+        var query = this.get('search');
+        this.set('searchQuery', query);
+        this.transitionToRoute('search', query);
     }
   }
 });

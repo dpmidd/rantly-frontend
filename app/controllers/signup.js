@@ -3,10 +3,10 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations.Mixin, {
   validations: {
-    firstname: {
+    firstName: {
       format: {with: /^\S*$/, message: "First name can't be blank or contain spaces"}
     },
-    lastname: {
+    lastName: {
       presence: {message: "Last name can't be blank"}
     },
     email: {

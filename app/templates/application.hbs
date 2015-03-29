@@ -13,9 +13,9 @@
 
 <body>
   <aside>
-    
+
     <div class="rant-search">
-      {{input class="rant-search-field" placeholder="Search" type="search"}}
+      {{input value=search class="rant-search-field" placeholder="Search" type="search" name="search" action='doSearch'}}
     </div>
 
     {{#if session.isAuthenticated}}
