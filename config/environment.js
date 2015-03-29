@@ -18,7 +18,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
-      'connect-src': "'self' " + process.env.ADAPTER_URL,
+      'connect-src': "'self' https://hidden-wave-5919.herokuapp.com/",
       'img-src': "'self' http://www.gravatar.com/",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
       'media-src': "'self'"
@@ -36,7 +36,7 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    serverTokenEndpoint: process.env.ADAPTER_URL,
+    serverTokenEndpoint: 'https://hidden-wave-5919.herokuapp.com/',
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email'
   };
