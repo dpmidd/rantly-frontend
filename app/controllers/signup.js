@@ -35,6 +35,10 @@ export default Ember.Controller.extend(EmberValidations.Mixin, {
       self.set('email', '');
       self.set('password', '');
       user.save().then(function () {
+        this.get('session').authenticate('simple-auth-authenticator:devise', {
+         identification: email,
+         password: password
+        });
         self.transitionToRoute('rants');
         Ember.run.later(function () {
           Ember.$('.rant-item').addClass('slide-out-right');

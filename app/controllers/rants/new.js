@@ -4,6 +4,7 @@ export default Ember.ObjectController.extend({
 
   actions: {
     saveRant: function() {
+
       var title = this.get('rantTitle');
       var body = this.get('rantBody');
       var userid = this.get('session.user_id');
@@ -18,6 +19,7 @@ export default Ember.ObjectController.extend({
         });
       });
     },
+
     cancelRant: function() {
       this.transitionToRoute('rants');
     }

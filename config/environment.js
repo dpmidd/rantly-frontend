@@ -1,6 +1,8 @@
-  /* jshint node: true */
+/* jshint node: true */
 
 module.exports = function(environment) {
+
+
   var ENV = {
     modulePrefix: 'rantly-frontend',
     environment: environment,
@@ -15,14 +17,14 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
-      'connect-src': "'self' localhost:3000",
-      'img-src': "'self' http://www.gravatar.com/",
-      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
-      'media-src': "'self'"
-  },
+          'default-src': "'none'",
+          'script-src': "'self' 'unsafe-eval'",
+          'font-src': "'self' fonts.gstatic.com",
+          'connect-src': "'self' " + process.env.ADAPTER_URL,
+          'img-src': "'self' *",
+          'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+          'media-src': "'self'"
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -32,12 +34,15 @@ module.exports = function(environment) {
 
   ENV['simple-auth'] = {
     authorizer: 'simple-auth-authorizer:devise',
+    identificationAttributeName: 'email',
+    authenticationRoute: '/',
     routeAfterAuthentication: null
   };
 
   ENV['simple-auth-devise'] = {
     crossOriginWhitelist: ['*'],
-    identificationAttributeName: 'email'
+    identificationAttributeName: 'email',
+    authenticationRoute: '/'
   };
 
   if (environment === 'development') {
