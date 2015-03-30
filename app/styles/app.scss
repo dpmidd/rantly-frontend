@@ -3,14 +3,15 @@ gutters: (0),
 );
 
 @import 'bower_components/susy/sass/susy';
-@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
-@import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
-@import 'login';
-@import 'signup';
-@import 'newrant';
 @import 'scalefonts';
 @import 'navigationbar';
+@import url(https://fonts.googleapis.com/css?family=Laila:400,700);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
+@import 'login';
+@import 'rants';
+@import 'newrant';
+@import 'signup';
 
 *,:after,:before{box-sizing:border-box}
 
@@ -27,8 +28,36 @@ body {
   }
   main {
     @include span(6 of 8 last);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
+
+main > section.list-users {
+  @include span(3.85 of 4);
+  margin-left: 20px;
+}
+
+main > section > div.user-card {
+  @include span(.9 of 4);
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+  padding: 15px 15px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: #34495e;
+  background-color: #fff;
+}
+
+
 
 .app-inner-header {
   float: left;
@@ -85,6 +114,7 @@ body {
   border-color: transparent;
   outline: 0;
   box-shadow: none;
+  width: 100%;
 }
 
 .rant-search-field input, .rant-search-field textarea {
@@ -102,7 +132,20 @@ body {
    color: white;
 }
 
-.signup-error {
-  margin-left: 5px;
-  font-size: 18px;
+.login-form.signup {
+  box-shadow: none;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.hero {
+  text-align: center;
+  font-family: Laila,serif;
+}
+
+.loading-container {
+  margin-top: 200px;
+  position: relative;
 }
