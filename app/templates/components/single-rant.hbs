@@ -24,7 +24,9 @@
             <span {{action "deleteRant" rant}} class="icon-trash"> Delete</span>
           </button>
         {{else}}
-          <button {{action "editRant" rant}} class="button button-primary edit"><span class="icon-new">Edit</span></button>
+          {{#if isOwner}}
+            <button {{action "editRant" rant}} class="button button-primary edit"><span class="icon-new">Edit</span></button>
+          {{/if}}
         {{/if}}
       </div>
 
