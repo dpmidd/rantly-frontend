@@ -5,7 +5,6 @@ module.exports = function(environment) {
     modulePrefix: 'rantly-frontend',
     environment: environment,
     baseURL: '/',
-    exportApplicationGlobal: true,
     locationType: 'auto',
     adapterURL: process.env.ADAPTER_URL,
     EmberENV: {
@@ -19,7 +18,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
-      'connect-src': "'self' localhost:3000 https://hidden-wave-5919.herokuapp.com/",
+      'connect-src': "'self' localhost:3000",
       'img-src': "'self' http://www.gravatar.com/",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
       'media-src': "'self'"
@@ -37,7 +36,6 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    serverTokenEndpoint: 'https://hidden-wave-5919.herokuapp.com/',
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email'
   };
